@@ -51,6 +51,41 @@ The application allows users to view available movie shows, select seats, and bo
 - GitHub
 - Postman
 
+
+## How to Run
+
+### Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+
+
+Frontend
+
+cd frontend
+npm install
+npm run dev
+
+
+
+
+Features
+
+View available movie shows
+View available seat count
+Select seats
+Book movie tickets
+Prevent double booking of the same seat
+Backend CRUD operations
+Input validation
+Error handling
+Loading and error states
+Price stored at the time of booking
+
+
+
 ## Project Structure
 
 ```text
