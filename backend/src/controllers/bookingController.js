@@ -18,28 +18,42 @@ export const createBooking = async (req, res) => {
 };
 
 export const getBookings = async (req, res) => {
-  const bookings = await bookingService.getBookings();
+  try {
+    const bookings = await bookingService.getBookings();
 
-  res.json({
-    success: true,
-    data: bookings
-  });
+    res.json({
+      success: true,
+      data: bookings
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch bookings"
+    });
+  }
 };
 
 export const getBooking = async (req, res) => {
-  const booking = await bookingService.getBookingById(req.params.id);
+  try {
+    const booking = await bookingService.getBookingById(req.params.id);
 
-  if (!booking) {
-    return res.status(404).json({
+    if (!booking) {
+      return res.status(404).json({
+        success: false,
+        message: "Booking not found"
+      });
+    }
+
+    res.json({
+      success: true,
+      data: booking
+    });
+  } catch (error) {
+    res.status(500).json({
       success: false,
-      message: "Booking not found"
+      message: "Failed to fetch booking"
     });
   }
-
-  res.json({
-    success: true,
-    data: booking
-  });
 };
 
 export const cancelBooking = async (req, res) => {
