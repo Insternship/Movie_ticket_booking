@@ -56,13 +56,12 @@ The application allows users to view available movie shows, select seats, and bo
 
 ### Backend
 
-```bash
 cd backend
 npm install
 npm run dev
 
 
-Frontend
+### Frontend
 
 cd frontend
 npm install
