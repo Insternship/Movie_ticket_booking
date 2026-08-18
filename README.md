@@ -107,6 +107,7 @@ movie-ticket-booking/
 │       └── middleware/
 │           ├── errorHandler.js
 │           └── notFound.js
+|           |__ validate.js
 │
 └── frontend/
     ├── package.json
