@@ -52,20 +52,6 @@ The application allows users to view available movie shows, select seats, and bo
 - Postman
 
 
-## How to Run
-
-### Backend
-
-cd backend
-npm install
-npm run dev
-
-
-### Frontend
-
-cd frontend
-npm install
-npm run dev
 
 
 
@@ -139,7 +125,7 @@ movie-ticket-booking/
         └── styles/
             └── app.css
 
-
+```
 
 Page 1 - Shows List
 
@@ -197,3 +183,23 @@ User A -> Booking successful
 User B -> Booking rejected
 
 This prevents the same seat from being booked twice.
+
+
+## How to Run
+
+### Backend
+
+cd backend
+
+npm install
+
+npm run dev
+
+
+### Frontend
+
+cd frontend
+
+npm install
+
+npm run dev
